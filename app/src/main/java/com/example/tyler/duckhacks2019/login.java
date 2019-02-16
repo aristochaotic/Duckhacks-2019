@@ -3,8 +3,11 @@ package com.example.tyler.duckhacks2019;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.view.View;
 
 public class login extends AppCompatActivity {
+    button b1;
+
 
     // Used to load the 'native-lib' library on application startup.
     static {
@@ -26,4 +29,12 @@ public class login extends AppCompatActivity {
      * which is packaged with this application.
      */
     public native String stringFromJNI();
+
+    b1 = (Button)findViewById(R.id.button); // initializes login button
+
+    public void onClick() {
+        EditText username = (EditText)findViewById(R.id.editText1);
+        EditText password = (EditText)findViewById(R.id.editText2);
+
+
 }
